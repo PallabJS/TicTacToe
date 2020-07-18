@@ -1,0 +1,313 @@
+/* LAYOUT ARRANGEMENTS */
+body, html
+{
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0px 1px;
+    zoom: 1.2;
+    /* background-image: url('/data/image/p1.png'); */
+}
+
+*
+{
+    /* background-repeat: no-repeat; */
+    font-size: 1vw !important;
+    background-position: center;
+}
+
+.maincontainer
+{
+    width: 100%;
+    height: 100%;
+}
+#gamewindow
+{
+    grid-template-columns: auto auto auto auto auto;
+    /* height: calc(100% - 100px); */
+    margin: 1vh 1vw ;
+    background-image: url("./data/image/bg_center.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 50pt;
+    border-right: 0.5vw green solid !important;
+    border-left: 0.5vw green solid !important;
+    border-radius: 1vw;
+}
+#playarea
+{
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    /* border: green 10px solid; */
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    height: 30vh;
+    width: 30vw;
+}
+
+.flex
+{
+    display: flex !important;
+}
+
+.childbox
+{
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* font-size: 30px; */
+    text-align: center;
+    border-radius: 1vh;
+
+    /* padding-top: 100%; */
+    /* background-image: url("/data/image/default.png"); */
+
+}
+
+.playerinfo
+{
+    height: calc(100% - 0px);
+    /* float: left; */
+    /* width: calc(20% - 10px); */
+}
+#p1
+{
+    border-right: 0.3vw rgb(228, 19, 19) solid;
+}
+#p2
+{
+    border-left: 0.3vw rgb(46, 99, 243) solid;
+}
+
+#statusbar
+{
+    border: 0.1vw rgb(29, 34, 29) solid;
+    background-color: rgba(0, 0, 0, 0.178);
+    border-radius: 0.5vw;
+    grid-column: 1/6;
+    grid-row: 4/6;
+    margin-top: 1vh;
+    background-color: black;
+    opacity: 0.9;
+    height: 30vh;
+}
+.player1heading
+{
+    padding: 1vh;
+    margin: 5px 1px 10px 1px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+/* CONTENT STYLING */
+.borderfirstitem
+{
+    border-top:0.1vw white groove;
+}
+.borderitems
+{
+    border-bottom:0.1vw white groove;
+    border-left:0.1vw white groove;
+}
+.borderright
+{
+    border-right:0.1vw white groove;
+}
+.hidden
+{
+    visibility: hidden;
+}
+
+.text_center
+{
+    text-align: center;
+}
+.marginspace
+{
+    margin-top: 5px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+#p1score
+{
+    color: red;
+    /* font-size: 30pt; */
+}
+#p2score
+{
+    color: blue;
+    /* font-size: 30pt; */
+}
+.text_size
+{
+    font-size: 1vw;
+}
+.color_white
+{
+    color: white;
+}
+.color_green
+{
+    color: rgb(23, 151, 23);
+}
+
+/* LOGIC STYLING */
+
+.childbox
+{
+    background-color:rgb(0, 0, 0);
+    opacity: 0.9;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width:1200px)
+{
+    .inputfield
+    {
+        width: 100px !important;
+    }
+}
+
+@media screen and (max-width:900px)
+{
+    .inputfield
+    {
+        width: 60px !important;
+    }
+}
+@media screen and (max-width:500px)
+{
+    .inputfield
+    {
+        width: 30px !important;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    #playarea
+    {
+        margin-bottom: 5vh;
+        /* border: green 10px solid; */
+        left: 50%;
+        transform: translate(-50%, 0%);
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        height: 10vh;
+        width: 30vw;
+        order: 2;
+        position: fixed;
+        top: 8vh;
+        z-index: 1;
+        width: 40vw;
+        height: 12vh;
+    }
+    body, html
+    {
+        box-sizing: border-box;
+        height: 100%;
+        margin: 0px 1px;
+        overflow: hidden;
+        /* background-image: url('/data/image/p1.png'); */
+    }
+
+    #gamewindow
+    {
+        display: flex;
+        flex-direction: column;
+        -webkit-order: 1;
+        order: 1 !important;
+        grid-template-columns: auto auto auto auto auto;
+        /* height: calc(100% - 100px); */
+        margin: 1vh 1vw ;
+        background-image: url("./data/image/bg_center.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 50pt;
+        border-right: 0.5vw green solid !important;
+        border-left: 0.5vw green solid !important;
+        border-radius: 1vw;
+        zoom: 2.2;
+        margin-top: 0.1vh !important;
+        /* height: 100vh !important; */
+        border: red 2px solid;
+    }
+
+    #statusbar
+    {
+        order: 1;
+        border: 0.1vw rgb(29, 34, 29) solid;
+        background-color: rgba(0, 0, 0, 0.178);
+        border-radius: 0.5vw;
+        grid-column: 1/6;
+        grid-row: 4/6;
+        margin-top: 1vh;
+        background-color: black;
+        opacity: 0.9;
+        height: 100%!important;
+        margin-top: 0.1vh;
+        font-size: 5vw !important;
+    }
+    #totalround
+    {
+        border: none;
+     }
+
+    .flex
+    {
+        display: flex !important;
+        flex-direction: column;
+    }
+    #p1
+    {
+        display: none;
+        height: 40px !important;
+        order: 2 !important;
+        border-right: 0.3vw rgb(228, 19, 19) solid;
+    }
+    #p2
+    {
+        display: none;
+        order: 3 !important;        
+        border-left: 0.3vw rgb(46, 99, 243) solid;
+    }
+
+    /* Render this only for phone */
+    #phone
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .p1phone
+    {
+        flex: 1;
+        position: absolute;
+        top: 17vh;
+        left: 5%;
+        width: 50%;
+        width: 40%;
+        order: 2 !important;
+        border: none;
+        height: 5vh;
+    }
+
+    .p2phone
+    {
+        flex: 1;
+        position: absolute;
+        top: 17vh;
+        left: 50%;
+        width: 45%;
+        order: 3 !important;        
+        border: none;
+        height: 5vh;
+    }
+    #gameinstruction
+    {
+        display: none;
+    }
+}

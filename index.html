@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Find the Treasure </title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="maincontainer flex">
+        <div id="p1" class="playerinfo" style="flex: 1">
+
+            <div class="text_center player1heading" style="background-color:red;">PLAYER 1</div>
+            <!-- Initialize player 1 name -->
+            <div id="p1form" class="marginspace text_center">
+                <input id="p1nameinput" class="marginspace inputfield" type="text" placeholder="Enter P1's name" style="width: 150px;">
+                <br>
+                <button id="player1ready" class="marginspace">START</button>
+            </div>
+
+            <div class="text_center">
+                <h1 id="player1name" class="text_center"> PLAYER 1 </h2>
+                <label for="p1score"> SCORE: </label>
+                <span id="p1score"> 0 </span>
+            </div>
+            
+        </div>
+
+        <!-- GRID GAME WINDOW -->
+        <div class="" id="gamewindow" style="flex: 2">
+            <div id="playarea">
+                <div class="borderitems borderfirstitem hidden" onclick="update()"></div>
+                <div id="zero" class="gamebox childbox borderitems borderfirstitem"></div>
+                <div id="one" class="gamebox childbox borderitems borderfirstitem"></div>
+                <div id="two" class="gamebox childbox borderitems borderfirstitem borderright"></div>
+                <div class="borderitems hidden"></div>
+                <div class="borderitems hidden"></div>
+                <div id="three" class="gamebox childbox borderitems"></div>
+                <div id="four" class="gamebox childbox borderitems"></div>
+                <div id="five" class="gamebox childbox borderitems borderright"></div>
+                <div class="borderitems hidden"></div>
+                <div class="borderitems hidden"></div>
+                <div id="six" class="gamebox childbox borderitems"></div>
+                <div id="seven" class="gamebox childbox borderitems"></div>
+                <div id="eight" class="gamebox childbox borderitems borderright"></div>
+                <div class="borderitems hidden"></div>
+            </div>
+
+            <!-- STATUS AREA -->
+            <div id="statusbar" class="color_white text_center">
+                <div id="gameinstruction" style="margin-top: 1vh;">
+                    <b style="color: rgb(36, 216, 36)"> Player 1 </b> starts the first mark. <br>
+                    Each player should put the <b style="color: rgb(36, 216, 36)">mark</b> in 5 seconds or opponent wins. <br>
+                    One game round completes in <b style="color: rgb(36, 216, 36)"> 45 </b> secs <br>
+ 
+                </div>
+                <!-- displaying game status -->
+                <h1 id="gamestatus" style="display: inline;"></h1>
+                <br>
+                <h1 id="totalround_label" style="display: inline;">Enter the number of rounds: </h1>
+                <input id="totalround" type="number" value="3" min="1" max="10">
+            </div>
+        </div>
+
+
+
+        <div id="p2" class="playerinfo" style="flex: 1">
+
+            <div class="text_center player1heading" style="background-color:blue;">PLAYER 1</div>
+            <!-- Initialize player 1 name -->
+            <div id="p2form" class="marginspace text_center">
+                <input id="p2nameinput" class="marginspace inputfield" type="text" placeholder="Enter P1's name" style="width: 150px;">
+                <br>
+                <button id="player2ready" class="marginspace">START</button>
+            </div>
+
+            <div class="text_center">
+                <h1 id="player2name" class="text_center"> PLAYER 1 </h2>
+                <label for="p2score"> SCORE: </label>
+                <span id="p2score"> 0 </span>
+            </div>
+             
+        </div>
+    </div>
+
+    <!-- Content for phone -->
+    <!-- <div id="phone">
+
+        <div class="playerinfo p1phone" style="flex: 1">
+
+            <div class="text_center player1heading" style="font-size: 3vw !important; background-color:red; padding: 0">PLAYER 1</div>
+         
+            <div id="p1form" class="marginspace text_center">
+                <input id="p1nameinput" class="marginspace inputfield" type="text" placeholder="Enter P1's name" style="width: 20vw !important; font-size: 2vw !important;">
+                <br>
+                <button id="player1ready" class="marginspace" style="width: 10vw; height: 2vh; font-size: 2vw !important;" >START</button>
+            </div>
+
+            <div class="text_center">
+                <h1 id="player1name" class="text_center"> PLAYER 1 </h2>
+                <label for="p1score" style="color: white; font-size: 3vw !important;"> SCORE: </label>
+                <span id="p2score" style="color: white; font-size: 3vw !important;"> 0 </span>
+            </div>
+        </div>
+
+        <div class="playerinfo p2phone" style="flex: 1">
+
+            <div class="text_center player1heading" style="font-size: 3vw !important; background-color:blue; padding: 0">PLAYER 1</div>
+           
+            <div id="p2form" class="marginspace text_center">
+                <input id="p2nameinput" class="marginspace inputfield" type="text" placeholder="Enter P1's name" style="width: 20vw !important; font-size: 2vw !important;">
+                <br>
+                <button id="player2ready" class="marginspace" style="width: 10vw; height: 2vh; font-size: 2vw !important;">START</button>
+            </div>
+
+            <div class="text_center">
+                <h1 id="player2name" class="text_center"> PLAYER 1 </h2>
+                <label for="p2score" style="color: white; font-size: 3vw !important;"> SCORE: </label>
+                <span id="p2score" style="color: white; font-size: 3vw !important;"> 0 </span>
+            </div>
+             
+        </div>
+
+    </div> -->
+    
+
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
